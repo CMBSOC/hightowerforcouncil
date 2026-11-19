@@ -2,11 +2,13 @@
 <html lang="en" data-look="scarlet" data-type="athletic" style=""><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Stephanie Hightower for Council</title>
+<title>Stephanie Hightower | Candidate for USATF’s Council Nomination</title>
 
-<meta name="description" content="Stephanie Hightower is a candidate to be USA Track and Field's nominee for the World Athletics Council. See the seat math, her record and where to find her in Portland.">
-<meta property="og:title" content="Stephanie Hightower for World Athletics Council">
-<meta property="og:description" content="The seat math, her record, and where to find her in Portland.">
+<meta name="description" content="Stephanie Hightower is a candidate to be USA Track and Field's nominee for the World Athletics Council. Explore her international experience, commitments to USATF members and priorities for athletes. Meet her in Portland, December 3–6, 2026.">
+<meta property="og:title" content="Stephanie Hightower | Candidate for USATF’s World Athletics Council Nomination">
+<meta property="og:description" content="International experience. A representative who reports back. Read Stephanie’s commitments and meet her at the USATF Annual Meeting in Portland.">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#BA0C2F">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link id="font-link" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&amp;family=Source+Sans+3:wght@400;600&amp;display=swap">
@@ -65,12 +67,16 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-bo
 a{color:var(--accent);text-underline-offset:.15em}
 :focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 h1,h2,h3,h4{font-family:var(--font-display);text-wrap:balance;margin:0}
-h1{font-size:clamp(2.6rem,10vw,4.4rem);line-height:1;font-weight:800;letter-spacing:-.01em}
+h1{font-size:clamp(2.6rem,10vw,4.4rem);line-height:1;font-weight:800;letter-spacing:-.01em;overflow-wrap:anywhere}
 h2{font-size:clamp(1.6rem,5vw,2.1rem);line-height:1.15;font-weight:700}
 h3{font-size:1.15rem;line-height:1.3;font-weight:700}
 h4{font-size:1rem;line-height:1.3;font-weight:700}
 p{margin:0}
 .wrap{max-width:46rem;margin:0 auto;padding:0 20px}
+.stack > *, .card > *, .controls > *, .hero > *, .hero-text > *, .who > *{min-width:0}
+.hero-summary{max-width:36rem}
+.support-line{font-size:.95rem;font-weight:600}
+section{scroll-margin-top:1rem}
 .skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--paper);padding:.6rem 1rem}
 .skip:focus{left:8px;top:8px;z-index:30}
 
@@ -86,7 +92,7 @@ p{margin:0}
 .lead{font-size:1.25rem;line-height:1.45}
 .tagline{font-family:var(--font-display);font-weight:700;font-size:1.2rem;line-height:1.35}
 .actions{display:flex;flex-wrap:wrap;gap:.75rem}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 1.2rem;border-radius:var(--radius);font:600 1rem var(--font-body);text-decoration:none;cursor:pointer;border:1px solid var(--ink);background:transparent;color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;max-width:100%;padding:.65rem 1.2rem;border-radius:var(--radius);font:600 1rem var(--font-body);text-align:center;text-decoration:none;cursor:pointer;border:1px solid var(--ink);background:transparent;color:var(--ink)}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
 .portrait{flex:0 1 14rem;display:grid;gap:.5rem;align-content:end}
 .portrait img,.mono{display:block;width:100%;height:auto;border-radius:calc(var(--radius) + 4px)}
@@ -110,12 +116,13 @@ section{padding:3rem 0;border-top:1px solid var(--line)}
 .controls{display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:flex-end}
 .ctl{display:grid;gap:.35rem}
 .ctl-label{font-size:.85rem;font-weight:600;color:var(--muted)}
-.seg{display:flex;gap:.4rem}
+.seg{display:flex;flex-wrap:wrap;gap:.4rem}
 .seg button{min-height:44px;padding:0 1rem;border:1px solid var(--muted);border-radius:var(--radius);background:transparent;color:var(--ink);font:600 .95rem var(--font-body);cursor:pointer}
 .seg button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
 .rng{display:flex;align-items:center;gap:.75rem}
-.rng input{width:10rem;max-width:100%;min-height:44px;accent-color:var(--accent)}
-.rng output{font-weight:600;font-variant-numeric:tabular-nums;min-width:3.4rem}
+.rng{min-width:0}
+.rng input{flex:1 1 10rem;width:10rem;min-width:0;max-width:100%;min-height:44px;margin:0;accent-color:var(--accent)}
+.rng output{flex:0 0 auto;font-weight:600;font-variant-numeric:tabular-nums;min-width:3.4rem}
 .legend{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;align-items:center;font-size:.85rem;color:var(--muted)}
 .legend .k{display:inline-flex;align-items:center;gap:.4rem}
 .step{font-size:1rem}
@@ -128,7 +135,7 @@ section{padding:3rem 0;border-top:1px solid var(--line)}
 .seat.w{background:var(--accent);color:var(--on-accent)}
 .seat.m{background:var(--seat-m);color:var(--on-seat-m);box-shadow:inset 0 0 0 1.5px var(--muted)}
 .seat.sm{width:1.5rem;height:1.5rem;font-size:.7rem}
-.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(9.5rem,1fr));gap:1rem}
+.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,9.5rem),1fr));gap:1rem}
 .num{border-top:3px solid var(--accent);padding-top:.6rem;display:grid;gap:.3rem;align-content:start}
 .num b{font-family:var(--font-display);font-size:2.3rem;line-height:1;font-weight:800;font-variant-numeric:tabular-nums lining-nums}
 .num span{font-size:.9rem;color:var(--muted);line-height:1.4}
@@ -137,17 +144,25 @@ section{padding:3rem 0;border-top:1px solid var(--line)}
 .pledges li{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:1rem 1.1rem;display:grid;gap:.4rem}
 .when{justify-self:start;border:1px solid var(--accent);color:var(--accent);border-radius:999px;padding:.1rem .75rem;font-size:.85rem;font-weight:600}
 
-.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1rem}
+.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,13rem),1fr));gap:1rem}
 .three > div{display:grid;gap:.35rem;align-content:start}
 .prio{display:grid;gap:.9rem}
 .prio + .prio{margin-top:.5rem;padding-top:1.5rem;border-top:1px solid var(--line)}
 
-.record{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.5rem}
+.record{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));gap:1.5rem}
 .record ul{margin:.4rem 0 0;padding-left:1.1rem;display:grid;gap:.3rem}
 .result{border-left:3px solid var(--accent);padding:.2rem 0 .2rem .9rem}
 
-.qa{display:grid;gap:1.75rem}
-.qa > div{display:grid;gap:.6rem}
+.qa{display:grid;gap:.75rem}
+details{min-width:0;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
+summary{padding:1rem 1.1rem;min-height:48px;font-family:var(--font-display);font-weight:700;line-height:1.4;cursor:pointer}
+summary:hover{color:var(--accent)}
+.disclosure-body{padding:0 1.1rem 1.1rem}
+.explainer{background:transparent}
+.explainer > .disclosure-body{padding:0 0 1rem}
+.explainer > .disclosure-body > p,.explainer > .disclosure-body > .stack{padding-left:1.1rem;padding-right:1.1rem}
+.explainer .card{border-left:0;border-right:0;border-radius:0}
+.sources a{overflow-wrap:anywhere}
 
 .sched{list-style:none;margin:0;padding:0;display:grid}
 .sched li{display:grid;grid-template-columns:13rem minmax(0,1fr);gap:.25rem 1rem;padding:.75rem 0;border-top:1px solid var(--line)}
@@ -165,6 +180,15 @@ footer{border-top:1px solid var(--line);padding:2rem 0 6rem;font-size:.85rem;col
 footer .wrap{display:grid;gap:.5rem}
 
 @media (max-width:560px){
+  .hero{padding-top:1.7rem}
+  .stat{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem}
+  .stat b{flex:0 1 6.4rem;font-size:1.5rem}
+  .stat span{flex:1 1 8rem;min-width:0}
+  .ctl{max-width:100%;width:100%}
+  .controls{display:grid;grid-template-columns:minmax(0,1fr)}
+  .when{max-width:100%;white-space:normal}
+  .explainer .card{padding:1rem}
+
   .row{grid-template-columns:minmax(0,1fr);gap:.25rem}
   .sched li{grid-template-columns:minmax(0,1fr)}
   .seat{width:1.9rem;height:1.9rem}
@@ -173,21 +197,18 @@ footer .wrap{display:grid;gap:.5rem}
 }
 </style>
 
-
 <link rel="canonical" href="https://hightowerforcouncil.com/"><meta property="og:url" content="https://hightowerforcouncil.com/"><meta property="og:type" content="website"></head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-
-
 
 <header class="top">
   <div class="wrap">
     <nav class="nav" aria-label="Sections">
       <ul>
-        <li><a href="#seat-math">Seat math</a></li>
         <li><a href="#commitments">Commitments</a></li>
         <li><a href="#priorities">Priorities</a></li>
-        <li><a href="#record">Record</a></li>
+        <li><a href="#record">Experience</a></li>
+        <li><a href="#seat-math">The election</a></li>
         <li><a href="#answers">Answers</a></li>
         <li><a href="#portland">Portland</a></li>
       </ul>
@@ -205,12 +226,14 @@ footer .wrap{display:grid;gap:.5rem}
           <p class="lead">Candidate to be USA Track &amp; Field's nominee for the World Athletics Council.</p>
         </div>
         <div>
-          <p class="tagline">A seat the United States can win. A representative who reports back.</p>
+          <p class="tagline">International experience. A representative who reports back.</p>
         </div>
+        <p class="hero-summary">A former USATF President and IAAF Council member, Stephanie continues to work across international athletics as Chair of the World Athletics Gender Leadership Taskforce.</p>
         <div class="actions">
-          <a class="btn primary" href="#seat-math">See the seat math</a>
-          <a class="btn" href="#commitments">Read her commitments</a>
+          <a class="btn primary" href="#commitments">Read her commitments</a>
+          <a class="btn" href="#portland">Meet her in Portland</a>
         </div>
+        <p class="support-line">Support Stephanie for USATF’s nomination.</p>
       </div>
       
       <div class="portrait standin">
@@ -232,20 +255,110 @@ footer .wrap{display:grid;gap:.5rem}
 
     <div class="stats">
       <div class="stat"><b>163</b><span>votes at the 2015 Congress, the most of any candidate for an individual Council seat</span></div>
-      <div class="stat"><b>11 of 13</b><span>individual Council seats that went to women in 2023</span></div>
-      <div class="stat"><b>13 and 13</b><span>women and men the Council must seat from 2027</span></div>
+      <div class="stat"><b>8 years</b><span>USATF President, 2008–2016</span></div>
+      <div class="stat"><b>Today</b><span>Chair of the World Athletics Gender Leadership Taskforce</span></div>
     </div>
     
   </div>
 
+  <section id="commitments" aria-labelledby="h-commit">
+    <div class="wrap stack">
+      <h2 id="h-commit">Connect every USATF voice</h2>
+      <p>Regular communication, clear follow-through and an opportunity for members to be heard. These commitments give USATF members specific dates to check.</p>
+      
+      <ul class="pledges">
+        <li><span class="when">Within 14 days of every Council meeting</span><p>A written update to USATF members on public Council decisions and what they mean for the sport.</p></li>
+        <li><span class="when">Four times a year</span><p>A call with the leaders of every USATF committee, with notes shared within 14 days.</p></li>
+        <li><span class="when">Every Annual Meeting</span><p>A standing report to delegates, with time for questions.</p></li>
+        <li><span class="when">Within 30 days of the Portland vote</span><p>An open briefing for athletes, coaches and agents on the LA28 qualification system.</p></li>
+      </ul>
+      <p class="fine">Council service carries a duty to the sport worldwide. Updates will respect confidentiality and collective decisions, and will not disclose individual members’ votes.</p>
+    </div>
+  </section>
+
+  <section id="priorities" aria-labelledby="h-prio">
+    <div class="wrap stack">
+      <h2 id="h-prio">What she will work on</h2>
+
+      <div class="prio">
+        <h3>For athletes: a fair, clear road to LA28 and beyond</h3>
+        <p>The LA28 qualification system was published on November 10, 2026. About 40 percent of athletes are expected to qualify by entry standard and 60 percent by world ranking. Achieving an entry standard does not automatically guarantee a quota place. Her focus is to make the rules clear now and fair for athletes in the next cycle.</p>
+        <div class="three">
+          <div><h4>Qualification</h4><p>Plain-language guidance on how places are earned, and written athlete input before any review of the rules.</p></div>
+          <div><h4>Rankings</h4><p>A request for a published, worldwide review of how national and collegiate championships are rated.</p></div>
+          <div><h4>Formats</h4><p>Advocacy for athlete consultation before format changes and publication of trial results.</p></div>
+        </div>
+        <p class="fine">Source: <a href="https://worldathletics.org/news/press-releases/qualification-system-la28-olympic-games">World Athletics, LA28 qualification system</a>, November 10, 2026.</p>
+      </div>
+
+      <div class="prio">
+        <h3>For officials and volunteers: an open door to international roles</h3>
+        <p>She wants every qualified USATF official and volunteer to know when an international role opens and how to be considered for it.</p>
+        <div class="three">
+          <div><h4>Openings</h4><p>Notice to USATF committees whenever World Athletics or NACAC opens nominations for a commission, working group or officiating panel.</p></div>
+          <div><h4>The path</h4><p>A plain guide to how international technical officials are trained, certified and selected.</p></div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section id="record" aria-labelledby="h-record">
+    <div class="wrap stack">
+      <h2 id="h-record">Her record</h2>
+      <p class="result">Stephanie chairs the World Athletics Gender Leadership Taskforce, which was formed in 2017 to expand women’s leadership across the sport. The Council reached gender parity in 2023, four years ahead of the requirement.</p>
+      <div class="record">
+        <div>
+          <h3>World Athletics and NACAC</h3>
+          <ul>
+            <li>IAAF Council member, elected 2015 and served to 2019</li>
+            <li>Chair, World Athletics Gender Leadership Taskforce</li>
+            <li>Former NACAC Vice President, appointed 2015</li>
+          </ul>
+        </div>
+        <div>
+          <h3>USA Track &amp; Field</h3>
+          <ul>
+            <li>President, 2008 to 2016</li>
+            <li>Chair of the Board, 2009 to 2015</li>
+            <li>Former Chair, Women's Track &amp; Field Committee</li>
+            <li>Team leader, team manager and chef de mission for Team USA</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Athlete</h3>
+          <ul>
+            <li>1980 U.S. Olympic Team, 100 meter hurdles</li>
+            <li>Held American and world records</li>
+            <li>Ohio State University</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Executive</h3>
+          <ul>
+            <li>President and CEO, Columbus Urban League</li>
+            <li>Former President, Columbus Board of Education, five years</li>
+          </ul>
+        </div>
+      </div>
+      <p class="fine">Read more: <a href="https://worldathletics.org/women-in-athletics/gender-leadership-taskforce">World Athletics Gender Leadership Taskforce</a> and <a href="https://www.usatf.org/news/2018/stephanie-hightower-honored-with-2018-usatf-giegen">USATF’s account of her career and service</a>.</p>
+    </div>
+  </section>
+
   <section id="seat-math" aria-labelledby="h-seat">
     <div class="wrap stack">
-      <h2 id="h-seat">The seat math</h2>
-      <p>From 2027 the World Athletics Council must seat 13 women and 13 men. Thirteen of its 26 seats are settled before the last vote. The other 13, the individual seats, are then split so the totals come out even.</p>
-      <p class="sub">Two things are not yet known: who will be elected President, and whether any Area elects a woman as its President. Move the controls to see how each one changes the split.</p>
+      <h2 id="h-seat">How the 2027 election works</h2>
+      <p>USATF chooses its nominee first. The World Athletics Congress then elects the Council. From 2027, the full Council must include 13 women and 13 men.</p>
+      <p>If all six Area Presidents are men, nine or ten of the 13 individual seats will be allocated to women, depending on who is elected President. The Area elections can change that split.</p>
+      <p class="fine">These are available seats, not odds of winning. The number of candidates and support from voting federations will also matter. In 2023, women won 11 of the 13 individual seats.</p>
+
+      <details class="explainer">
+        <summary>Explore the seat calculator and voting rules</summary>
+        <div class="disclosure-body stack">
+          <p class="sub">Choose a President and the number of women elected as Area Presidents to see how the individual seats are allocated.</p>
 
       <div class="card" id="seat-chart">
-        <div class="controls">
+        <div class="controls" hidden>
           <div class="ctl">
             <span class="ctl-label" id="pres-label">President elected</span>
             <div class="seg" role="group" aria-labelledby="pres-label">
@@ -289,122 +402,41 @@ footer .wrap{display:grid;gap:.5rem}
         <h3>How the count works</h3>
         <p>The President and Vice Presidents are elected first. The women and men already seated are then counted: the President, the four Vice Presidents, the six Area Presidents and the two athlete members. Each count is subtracted from 13, and the result is announced before the last vote.</p>
         <p>Every federation votes for exactly 13 names, and a ballot is invalid unless it includes at least the announced number of women and of men. The seats go to the highest vote-getters of each sex.</p>
-        <p>With today's Area leaders, nine or ten of the 13 individual seats are reserved for women and three or four for men. USATF sends one nominee into that vote.</p>
         <p class="fine">Sources: <a href="https://worldathletics.org/download/download?filename=f45ccaea-b378-4657-bdd2-6770e3bb2532.pdf&amp;urlslug=x">World Athletics Constitution</a>, Articles 36.6, 41.1 and 86.1, and <a href="https://worldathletics.org/download/download?filename=4f127f3a-e134-48ed-a876-da12eb4f3568.pdf&amp;urlslug=x">Rules of Congress</a>, Rule 8.3.</p>
       </div>
-    </div>
-  </section>
-
-  <section id="commitments" aria-labelledby="h-commit">
-    <div class="wrap stack">
-      <h2 id="h-commit">Connect every USATF voice</h2>
-      <p>Her commitments to members, each with a date, so they can hold her to them.</p>
-      
-      <ul class="pledges">
-        <li><span class="when">Within 14 days of every Council meeting</span><p>A written report to USATF members on what was decided and why.</p></li>
-        <li><span class="when">Four times a year</span><p>A call with the leaders of every USATF committee, with notes shared within 14 days.</p></li>
-        <li><span class="when">Every Annual Meeting</span><p>A standing report to delegates, with time for questions.</p></li>
-        <li><span class="when">Within 30 days of the Portland vote</span><p>An open briefing for athletes, coaches and agents on the LA28 qualification system.</p></li>
-      </ul>
-      <p class="fine">Council decisions are collective. She will report what was decided and why, not how individual members voted.</p>
-    </div>
-  </section>
-
-  <section id="priorities" aria-labelledby="h-prio">
-    <div class="wrap stack">
-      <h2 id="h-prio">What she will work on</h2>
-      
-
-      <div class="prio">
-        <h3>For athletes: a fair, clear road to LA28 and beyond</h3>
-        <p>The LA28 qualification system was published on November 10, 2026. About 40 percent of athletes are expected to qualify by entry standard and 60 percent by world ranking. Her focus is to make the rules clear now and fair for every athlete in the next cycle.</p>
-        <div class="three">
-          <div><h4>Qualification</h4><p>Plain-language guidance on how places are earned, and written athlete input before any review of the rules.</p></div>
-          <div><h4>Rankings</h4><p>A request for a published, worldwide review of how national and collegiate championships are rated.</p></div>
-          <div><h4>Formats</h4><p>Athletes asked before a format changes, and the results of every trial published.</p></div>
         </div>
-        <p class="fine">Source: <a href="https://worldathletics.org/news/press-releases/qualification-system-la28-olympic-games">World Athletics, LA28 qualification system</a>, November 10, 2026.</p>
-      </div>
-
-      <div class="prio">
-        <h3>For officials and volunteers: an open door to international roles</h3>
-        <p>She wants every qualified USATF official and volunteer to know when an international role opens and how to be considered for it.</p>
-        <div class="three">
-          <div><h4>Openings</h4><p>Notice to USATF committees whenever World Athletics or NACAC opens nominations for a commission, working group or officiating panel.</p></div>
-          <div><h4>The path</h4><p>A plain guide to how international technical officials are trained, certified and selected.</p></div>
-        </div>
-        
-      </div>
-    </div>
-  </section>
-
-  <section id="record" aria-labelledby="h-record">
-    <div class="wrap stack">
-      <h2 id="h-record">Her record</h2>
-      <p class="result">The Council reached 13 women and 13 men in 2023, four years ahead of the requirement. She chairs the World Athletics Gender Leadership Taskforce, formed in 2017.</p>
-      <div class="record">
-        <div>
-          <h3>World Athletics and NACAC</h3>
-          <ul>
-            <li>IAAF Council member, elected 2015 and served to 2019</li>
-            <li>Chair, World Athletics Gender Leadership Taskforce</li>
-            <li>NACAC Vice President, appointed 2015</li>
-          </ul>
-        </div>
-        <div>
-          <h3>USA Track &amp; Field</h3>
-          <ul>
-            <li>President, 2008 to 2016</li>
-            <li>Chair of the Board, 2009 to 2015</li>
-            <li>Chair, Women's Track &amp; Field Committee</li>
-            <li>Team leader, team manager and chef de mission for Team USA</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Athlete</h3>
-          <ul>
-            <li>1980 U.S. Olympic Team, 100 meter hurdles</li>
-            <li>Held American and world records</li>
-            <li>Ohio State University</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Executive</h3>
-          <ul>
-            <li>President and CEO, Columbus Urban League</li>
-            <li>President, Columbus Board of Education, five years</li>
-          </ul>
-        </div>
-      </div>
-      
+      </details>
     </div>
   </section>
 
   <section id="answers" aria-labelledby="h-answers">
     <div class="wrap stack">
       <h2 id="h-answers">Straight answers</h2>
-      <p>Three questions delegates are asking, answered plainly.</p>
-      
+      <p>Questions about her candidacy and the USATF nomination.</p>
       <div class="qa">
-        <div>
-          <h3>What happened in 2014, and what has changed?</h3>
-          <p>In 2014 the USATF Board named her as its nominee for the IAAF Council after delegates at the Annual Meeting had voted for another candidate. The Board had the authority to do that under the rules of the time. Many members felt their vote had been set aside, and that reaction was fair.</p>
-          <p>The rule has changed since, and she helped negotiate the change. Today the delegates elect the nominee, and the Board can overturn their choice only by a two-thirds vote for good cause. She is asking for that vote.</p>
-          
-        </div>
-        <div>
-          <h3>What will be different from 2018?</h3>
-          <p>In 2018 the delegates chose another nominee. The lesson was plain: the case has to be made in person, in the rooms where delegates decide. This year she is making it committee by committee, with her commitments in writing and dated so members can check them.</p>
-          <p>The election itself is different too. From 2027 the Council must seat 13 women and 13 men, which is why most of the 13 individual seats will go to women.</p>
-          
-        </div>
-        <div>
-          <h3>Why her?</h3>
-          <p>The arithmetic. With today's Area Presidents, nine or ten of the 13 individual seats will go to women, and USATF sends one nominee.</p>
-          <p>The record. She has won this vote before, with 163 votes in 2015, the most of any candidate for an individual seat. She served on the Council from 2015 to 2019 and chairs the World Athletics Gender Leadership Taskforce today.</p>
-          <p>The commitment. She has put in writing how and when she will report back to members.</p>
-          
-        </div>
+        <details>
+          <summary>Why Stephanie?</summary>
+          <div class="disclosure-body stack">
+            <p>She brings experience leading USATF, service on the IAAF Council from 2015 to 2019, and continuing international work as Chair of the World Athletics Gender Leadership Taskforce.</p>
+            <p>She has won an individual Council seat before, with 163 votes in 2015. Her commitments set out how she will listen to USATF members and report back.</p>
+            <p>The <a href="#seat-math">2027 election rules</a> are relevant to USATF’s choice, but they do not guarantee any candidate a seat.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What happened in 2014, and what has changed?</summary>
+          <div class="disclosure-body stack">
+            <p>In 2014 the USATF Board named her as its nominee for the IAAF Council after delegates at the Annual Meeting had voted for another candidate. Many members felt their vote had been set aside, and that reaction was fair.</p>
+            <p>Today the delegates elect the nominee. Under Article 17-F, the Board may reject that nominee only by a two-thirds vote of its total non-conflicted members for good cause to disqualify the individual. The nominee has a right of appeal. Stephanie is asking delegates for their vote.</p>
+            <p class="fine">Source: <a href="https://www.usatf.org/USATF/media/USATF/Bylaws/2026-Governance-Handbook-LL-Copy_sea_9-16-26.docx">USATF 2026 Governance Handbook</a>, Articles 17-B and 17-F.</p>
+          </div>
+        </details>
+        <details>
+          <summary>What is different from 2018?</summary>
+          <div class="disclosure-body stack">
+            <p>In 2018 the delegates chose another nominee. Her 2026 platform puts specific reporting commitments in writing, alongside priorities for athletes, officials and volunteers.</p>
+            <p>The international election rules are also changing: the Council must reach gender parity in 2027, with two women and two men elected as Vice Presidents. The split of individual seats depends on the other leadership results.</p>
+          </div>
+        </details>
       </div>
     </div>
   </section>
@@ -412,20 +444,20 @@ footer .wrap{display:grid;gap:.5rem}
   <section id="portland" aria-labelledby="h-portland">
     <div class="wrap stack">
       <h2 id="h-portland">Find her in Portland</h2>
-      <p>The USATF Annual Meeting runs December 3 to 6 at the Oregon Convention Center. She wants to hear from you there.</p>
+      <p>Support Stephanie for USATF’s nomination and meet her at the Annual Meeting, December 3–6 at the Oregon Convention Center in Portland.</p>
       <ul class="sched">
         <li><span class="t">Thursday, December 3<span><br>5:00 to 7:00 p.m.</span></span><span><strong>Opening General Session</strong><br>Oregon Ballroom 201/202</span></li>
         <li><span class="t">Friday, December 4<span><br>9:00 to 10:00 a.m.</span></span><span><strong>Candidate presentations</strong><br>World Athletics, NACAC and General Competition. Room A104.</span></li>
         
       </ul>
-      
-      
-
-      
+      <p>Voting delegates: consult the official Annual Meeting schedule for ballot times, location and any updates to the sessions above.</p>
+      <div class="actions">
+        <a class="btn primary" href="https://www.flipsnack.com/usatf/usa-tf-am-schedule-2026">View the official schedule</a>
+        <button class="btn" id="share-page" type="button" hidden>Copy website link</button>
+      </div>
+      <p class="status" id="share-status" role="status"></p>
     </div>
   </section>
-
-  
 
   <section id="sources" aria-labelledby="h-sources">
     <div class="wrap stack">
@@ -440,6 +472,7 @@ footer .wrap{display:grid;gap:.5rem}
         <li><a href="https://www.capitalfm.co.ke/sports/2026/05/17/ak-boss-tuwei-elected-interim-president-of-african-athletics-body/">Capital FM on the African confederation's interim president</a>, May 17, 2026</li>
         <li><a href="https://usatf.org/news/2018/stephanie-hightower-honored-with-2018-usatf-giegen">USA Track &amp; Field on her 2018 Giegengack Award</a></li>
         <li><a href="https://www.flipsnack.com/usatf/usa-tf-am-schedule-2026">USATF 2026 Annual Meeting schedule</a></li>
+        <li><a href="https://www.usatf.org/USATF/media/USATF/Bylaws/2026-Governance-Handbook-LL-Copy_sea_9-16-26.docx">USATF 2026 Governance Handbook</a>, Articles 17-B and 17-F</li>
       </ul>
     </div>
   </section>
@@ -453,11 +486,8 @@ footer .wrap{display:grid;gap:.5rem}
   </div>
 </footer>
 
-
-
-
 <script>
-/* Seat chart. This is the only script the public site needs. */
+/* Accessible seat calculator and an optional copy-link action. */
 (function () {
   function $(id) { return document.getElementById(id); }
   var seat = { p: 'M', a: 0 };
@@ -490,10 +520,12 @@ footer .wrap{display:grid;gap:.5rem}
     $('n-m').textContent = nm;
     $('n-min').textContent = nw;
     $('area-out').textContent = seat.a + ' of 6';
+    $('area-w').setAttribute('aria-valuetext', seat.a + ' of 6 Area Presidents are women');
     $('pres-m').setAttribute('aria-pressed', String(seat.p === 'M'));
     $('pres-w').setAttribute('aria-pressed', String(seat.p === 'W'));
   }
   if (!$('seat-chart')) return;
+  $('seat-chart').querySelector('.controls').hidden = false;
   $('pres-m').addEventListener('click', function () { seat.p = 'M'; drawSeats(); });
   $('pres-w').addEventListener('click', function () { seat.p = 'W'; drawSeats(); });
   $('area-w').addEventListener('input', function () {
@@ -503,9 +535,24 @@ footer .wrap{display:grid;gap:.5rem}
   });
   drawSeats();
 })();
+
+(function () {
+  var button = document.getElementById('share-page');
+  var status = document.getElementById('share-status');
+  if (!button || !status) return;
+  button.hidden = false;
+  button.addEventListener('click', async function () {
+    var url = 'https://hightowerforcouncil.com/';
+    try {
+      if (!navigator.clipboard || !navigator.clipboard.writeText) throw new Error('Clipboard unavailable');
+      await navigator.clipboard.writeText(url);
+      status.textContent = 'Website link copied.';
+    } catch (error) {
+      status.textContent = 'Copy this address: ' + url;
+    }
+  });
+})();
 </script>
 
-
-
-
 </body></html>
+
