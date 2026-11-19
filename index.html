@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en" data-look="scarlet" data-type="athletic" style=""><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stephanie Hightower for Council</title>
+
+<meta name="description" content="Stephanie Hightower is a candidate to be USA Track and Field's nominee for the World Athletics Council. See the seat math, her record and where to find her in Portland.">
+<meta property="og:title" content="Stephanie Hightower for World Athletics Council">
+<meta property="og:description" content="The seat math, her record, and where to find her in Portland.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link id="font-link" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&amp;family=Source+Sans+3:wght@400;600&amp;display=swap">
+<style>
+/* ================= LOOK SETTINGS =================
+   Layout idea: one reading column, a typographic hero, and the seat grid as the only graphic.
+   Every color, font, corner and size on the page comes from the tokens in this block. */
+:root{
+  --paper:#F3F3F1;
+  --surface:#FFFFFF;
+  --ink:#1B1B1F;
+  --muted:#5A5E66;
+  --line:#D8D8D3;
+  --accent:#BA0C2F;
+  --on-accent:#FFFFFF;
+  --seat-m:#E2E3E5;
+  --on-seat-m:#1B1B1F;
+  --font-display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --font-body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+  --radius:8px;
+  --base:112.5%; /* 112.5% is 18px text for most readers */
+  color-scheme:light;
+}
+:root[data-look="midnight"]{
+  --paper:#0F1B2D;--surface:#17273F;--ink:#F2F4F7;--muted:#A9B4C4;--line:#2B3D58;
+  --accent:#F2B544;--on-accent:#1A1203;--seat-m:#2B3D58;--on-seat-m:#E6EBF2;
+  color-scheme:dark;
+}
+:root[data-look="forest"]{
+  --paper:#FAFAF6;--surface:#FFFFFF;--ink:#14231C;--muted:#55615A;--line:#DADFD8;
+  --accent:#1F6F50;--on-accent:#FFFFFF;--seat-m:#E3E7E1;--on-seat-m:#14231C;
+}
+:root[data-look="plain"]{
+  --paper:#FFFFFF;--surface:#F5F6F8;--ink:#111318;--muted:#5B6270;--line:#DEE1E6;
+  --accent:#1D4ED8;--on-accent:#FFFFFF;--seat-m:#E5E7EB;--on-seat-m:#111318;
+}
+:root[data-type="editorial"]{
+  --font-display:"Newsreader",Georgia,"Times New Roman",serif;
+  --font-body:"Public Sans","Segoe UI",system-ui,sans-serif;
+}
+:root[data-type="civic"]{
+  --font-display:"Public Sans","Segoe UI",system-ui,sans-serif;
+  --font-body:"Public Sans","Segoe UI",system-ui,sans-serif;
+}
+:root[data-type="system"]{
+  --font-display:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --font-body:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+/* ================= END LOOK SETTINGS ================= */
+
+*{box-sizing:border-box}
+html{font-size:var(--base);-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font-body);line-height:1.6}
+[hidden]{display:none!important}
+a{color:var(--accent);text-underline-offset:.15em}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+h1,h2,h3,h4{font-family:var(--font-display);text-wrap:balance;margin:0}
+h1{font-size:clamp(2.6rem,10vw,4.4rem);line-height:1;font-weight:800;letter-spacing:-.01em}
+h2{font-size:clamp(1.6rem,5vw,2.1rem);line-height:1.15;font-weight:700}
+h3{font-size:1.15rem;line-height:1.3;font-weight:700}
+h4{font-size:1rem;line-height:1.3;font-weight:700}
+p{margin:0}
+.wrap{max-width:46rem;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--paper);padding:.6rem 1rem}
+.skip:focus{left:8px;top:8px;z-index:30}
+
+.top{border-top:6px solid var(--accent)}
+.nav ul{list-style:none;margin:0;padding:.4rem 0;display:flex;flex-wrap:wrap;gap:0 1.2rem}
+.nav a{display:inline-flex;align-items:center;min-height:44px;color:var(--ink);text-decoration:none;font-size:.9rem;font-weight:600}
+.nav a:hover{text-decoration:underline}
+
+.hero{display:flex;flex-wrap:wrap;gap:1.5rem 2rem;align-items:flex-end;padding:2.5rem 0 2rem}
+.hero-text{flex:1 1 22rem;display:grid;gap:1rem}
+.who{display:grid;gap:1rem}
+.eyebrow{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--accent)}
+.lead{font-size:1.25rem;line-height:1.45}
+.tagline{font-family:var(--font-display);font-weight:700;font-size:1.2rem;line-height:1.35}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 1.2rem;border-radius:var(--radius);font:600 1rem var(--font-body);text-decoration:none;cursor:pointer;border:1px solid var(--ink);background:transparent;color:var(--ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.portrait{flex:0 1 14rem;min-height:15rem;display:grid;place-items:center;align-content:center;text-align:center}
+
+.stats{display:grid;grid-template-columns:minmax(0,1fr);gap:1rem;padding-bottom:2.5rem}
+@media (min-width:52rem){.stats{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:1rem 1.1rem;display:grid;gap:.35rem;align-content:start}
+.stat b{font-family:var(--font-display);font-size:2rem;line-height:1.05;font-weight:800;font-variant-numeric:tabular-nums lining-nums}
+.stat span{font-size:.9rem;color:var(--muted);line-height:1.4}
+
+section{padding:3rem 0;border-top:1px solid var(--line)}
+.stack{display:grid;gap:1.1rem}
+.sub{color:var(--muted)}
+.fine{font-size:.85rem;color:var(--muted);line-height:1.5}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:calc(var(--radius) + 4px);padding:1.25rem;display:grid;gap:1rem}
+.controls{display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:flex-end}
+.ctl{display:grid;gap:.35rem}
+.ctl-label{font-size:.85rem;font-weight:600;color:var(--muted)}
+.seg{display:flex;gap:.4rem}
+.seg button{min-height:44px;padding:0 1rem;border:1px solid var(--muted);border-radius:var(--radius);background:transparent;color:var(--ink);font:600 .95rem var(--font-body);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.rng{display:flex;align-items:center;gap:.75rem}
+.rng input{width:10rem;max-width:100%;min-height:44px;accent-color:var(--accent)}
+.rng output{font-weight:600;font-variant-numeric:tabular-nums;min-width:3.4rem}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;align-items:center;font-size:.85rem;color:var(--muted)}
+.legend .k{display:inline-flex;align-items:center;gap:.4rem}
+.step{font-size:1rem}
+.rows{display:grid;gap:.5rem}
+.row{display:grid;grid-template-columns:9.5rem minmax(0,1fr);gap:.75rem;align-items:center}
+.row-label{font-size:.9rem;color:var(--muted)}
+.seats{display:flex;flex-wrap:wrap;gap:6px 14px;min-height:2.2rem}
+.grp{display:flex;flex-wrap:wrap;gap:6px}
+.seat{width:2.2rem;height:2.2rem;display:inline-grid;place-items:center;border-radius:calc(var(--radius) * .6);font-weight:600;font-size:.85rem;line-height:1}
+.seat.w{background:var(--accent);color:var(--on-accent)}
+.seat.m{background:var(--seat-m);color:var(--on-seat-m);box-shadow:inset 0 0 0 1.5px var(--muted)}
+.seat.sm{width:1.5rem;height:1.5rem;font-size:.7rem}
+.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(9.5rem,1fr));gap:1rem}
+.num{border-top:3px solid var(--accent);padding-top:.6rem;display:grid;gap:.3rem;align-content:start}
+.num b{font-family:var(--font-display);font-size:2.3rem;line-height:1;font-weight:800;font-variant-numeric:tabular-nums lining-nums}
+.num span{font-size:.9rem;color:var(--muted);line-height:1.4}
+
+.pledges{list-style:none;margin:0;padding:0;display:grid;gap:.75rem}
+.pledges li{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:1rem 1.1rem;display:grid;gap:.4rem}
+.when{justify-self:start;border:1px solid var(--accent);color:var(--accent);border-radius:999px;padding:.1rem .75rem;font-size:.85rem;font-weight:600}
+
+.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(13rem,1fr));gap:1rem}
+.three > div{display:grid;gap:.35rem;align-content:start}
+.prio{display:grid;gap:.9rem}
+.prio + .prio{margin-top:.5rem;padding-top:1.5rem;border-top:1px solid var(--line)}
+
+.record{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1.5rem}
+.record ul{margin:.4rem 0 0;padding-left:1.1rem;display:grid;gap:.3rem}
+.result{border-left:3px solid var(--accent);padding:.2rem 0 .2rem .9rem}
+
+.qa{display:grid;gap:1.75rem}
+.qa > div{display:grid;gap:.6rem}
+
+.sched{list-style:none;margin:0;padding:0;display:grid}
+.sched li{display:grid;grid-template-columns:13rem minmax(0,1fr);gap:.25rem 1rem;padding:.75rem 0;border-top:1px solid var(--line)}
+.sched li:first-child{border-top:0}
+.sched .t{font-weight:600;font-variant-numeric:tabular-nums}
+.names{font-size:1.05rem}
+form{display:grid;gap:.75rem}
+label{font-weight:600;font-size:.95rem}
+input[type="text"],textarea{width:100%;font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--muted);border-radius:var(--radius);padding:.7rem .8rem}
+textarea{min-height:6.5rem;resize:vertical}
+.status{font-size:.9rem;color:var(--muted);min-height:1.4em}
+
+.sources{margin:0;padding-left:1.2rem;display:grid;gap:.4rem;font-size:.9rem}
+footer{border-top:1px solid var(--line);padding:2rem 0 6rem;font-size:.85rem;color:var(--muted)}
+footer .wrap{display:grid;gap:.5rem}
+
+@media (max-width:560px){
+  .row{grid-template-columns:minmax(0,1fr);gap:.25rem}
+  .sched li{grid-template-columns:minmax(0,1fr)}
+  .seat{width:1.9rem;height:1.9rem}
+  .seats{gap:5px 12px}
+  .grp{gap:5px}
+}
+</style>
+
+
+<link rel="canonical" href="https://hightowerforcouncil.com/"><meta property="og:url" content="https://hightowerforcouncil.com/"><meta property="og:type" content="website"><meta name="robots" content="noindex, nofollow"></head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div role="note" style="background:var(--ink);color:var(--paper);font-size:.85rem;text-align:center;padding:.5rem 20px">Draft for review. Not approved by the candidate.</div>
+
+
+<header class="top">
+  <div class="wrap">
+    <nav class="nav" aria-label="Sections">
+      <ul>
+        <li><a href="#seat-math">Seat math</a></li>
+        <li><a href="#commitments">Commitments</a></li>
+        <li><a href="#priorities">Priorities</a></li>
+        <li><a href="#record">Record</a></li>
+        <li><a href="#answers">Answers</a></li>
+        <li><a href="#portland">Portland</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="wrap">
+    <div class="hero">
+      <div class="hero-text">
+        <div class="who">
+          <p class="eyebrow">USATF Annual Meeting. Portland, December 3 to 6, 2026.</p>
+          <h1>Stephanie Hightower</h1>
+          <p class="lead">Candidate to be USA Track &amp; Field's nominee for the World Athletics Council.</p>
+        </div>
+        <div>
+          <p class="tagline">A seat the United States can win. A representative who reports back.</p>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="#seat-math">See the seat math</a>
+          <a class="btn" href="#commitments">Read her commitments</a>
+        </div>
+      </div>
+      
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>163</b><span>votes at the 2015 Congress, the most of any candidate for an individual Council seat</span></div>
+      <div class="stat"><b>11 of 13</b><span>individual Council seats that went to women in 2023</span></div>
+      <div class="stat"><b>13 and 13</b><span>women and men the Council must seat from 2027</span></div>
+    </div>
+    
+  </div>
+
+  <section id="seat-math" aria-labelledby="h-seat">
+    <div class="wrap stack">
+      <h2 id="h-seat">The seat math</h2>
+      <p>From 2027 the World Athletics Council must seat 13 women and 13 men. Thirteen of its 26 seats are settled before the last vote. The other 13, the individual seats, are then split so the totals come out even.</p>
+      <p class="sub">Two things are not yet known: who will be elected President, and whether any Area elects a woman as its President. Move the controls to see how each one changes the split.</p>
+
+      <div class="card" id="seat-chart">
+        <div class="controls">
+          <div class="ctl">
+            <span class="ctl-label" id="pres-label">President elected</span>
+            <div class="seg" role="group" aria-labelledby="pres-label">
+              <button type="button" id="pres-m" aria-pressed="true">A man</button>
+              <button type="button" id="pres-w" aria-pressed="false">A woman</button>
+            </div>
+          </div>
+          <div class="ctl">
+            <label class="ctl-label" for="area-w">Women among the six Area Presidents</label>
+            <div class="rng">
+              <input type="range" id="area-w" min="0" max="6" step="1" value="0">
+              <output id="area-out" for="area-w">0 of 6</output>
+            </div>
+          </div>
+        </div>
+
+        <p class="legend"><span class="k"><span class="seat w sm" aria-hidden="true">W</span>Woman</span><span class="k"><span class="seat m sm" aria-hidden="true">M</span>Man</span></p>
+
+        <h3 class="step">Step 1. Settled before the individual vote: 13 seats</h3>
+        <div class="rows">
+          <div class="row"><span class="row-label">President (1)</span><div class="seats" id="s-pres" role="img" aria-label="President: 0 women, 1 man"><span class="grp"><span class="seat m" aria-hidden="true">M</span></span></div></div>
+          <div class="row"><span class="row-label">Vice Presidents (4)</span><div class="seats" id="s-vp" role="img" aria-label="Vice Presidents: 2 women, 2 men"><span class="grp"><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span></span><span class="grp"><span class="seat m" aria-hidden="true">M</span><span class="seat m" aria-hidden="true">M</span></span></div></div>
+          <div class="row"><span class="row-label">Area Presidents (6)</span><div class="seats" id="s-ap" role="img" aria-label="Area Presidents: 0 women, 6 men"><span class="grp"><span class="seat m" aria-hidden="true">M</span><span class="seat m" aria-hidden="true">M</span><span class="seat m" aria-hidden="true">M</span><span class="seat m" aria-hidden="true">M</span><span class="seat m" aria-hidden="true">M</span><span class="seat m" aria-hidden="true">M</span></span></div></div>
+          <div class="row"><span class="row-label">Athletes (2)</span><div class="seats" id="s-ath" role="img" aria-label="Athlete representatives: 1 woman, 1 man"><span class="grp"><span class="seat w" aria-hidden="true">W</span></span><span class="grp"><span class="seat m" aria-hidden="true">M</span></span></div></div>
+        </div>
+
+        <h3 class="step">Step 2. Individual seats, voted last: 13 seats</h3>
+        <div class="seats" id="s-ind" role="img" aria-label="Individual seats: 10 women, 3 men"><span class="grp"><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span></span><span class="grp"><span class="seat m" aria-hidden="true">M</span><span class="seat m" aria-hidden="true">M</span><span class="seat m" aria-hidden="true">M</span></span></div>
+
+        <div class="nums" aria-live="polite">
+          <div class="num"><b id="n-w">10</b><span>individual seats for women</span></div>
+          <div class="num"><b id="n-m">3</b><span>individual seats for men</span></div>
+          <div class="num"><b id="n-min">10</b><span>women every federation's ballot must name, at minimum</span></div>
+        </div>
+        <noscript><p>With a man elected President and six male Area Presidents, 10 individual seats go to women and 3 to men. With a woman elected President, the split is 9 and 4.</p></noscript>
+        <p class="fine">Seats available, not a prediction. As of November 19, 2026, all six Area associations are led by men, one of them on an interim basis. The Area elections in 2027 can change that, and each woman elected moves one seat.</p>
+        
+      </div>
+
+      <div class="stack">
+        <h3>How the count works</h3>
+        <p>The President and Vice Presidents are elected first. The women and men already seated are then counted: the President, the four Vice Presidents, the six Area Presidents and the two athlete members. Each count is subtracted from 13, and the result is announced before the last vote.</p>
+        <p>Every federation votes for exactly 13 names, and a ballot is invalid unless it includes at least the announced number of women and of men. The seats go to the highest vote-getters of each sex.</p>
+        <p>With today's Area leaders, nine or ten of the 13 individual seats are reserved for women and three or four for men. USATF sends one nominee into that vote.</p>
+        <p class="fine">Sources: <a href="https://worldathletics.org/download/download?filename=f45ccaea-b378-4657-bdd2-6770e3bb2532.pdf&amp;urlslug=x">World Athletics Constitution</a>, Articles 36.6, 41.1 and 86.1, and <a href="https://worldathletics.org/download/download?filename=4f127f3a-e134-48ed-a876-da12eb4f3568.pdf&amp;urlslug=x">Rules of Congress</a>, Rule 8.3.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="commitments" aria-labelledby="h-commit">
+    <div class="wrap stack">
+      <h2 id="h-commit">Connect every USATF voice</h2>
+      <p>Her commitments to members, each with a date, so they can hold her to them.</p>
+      
+      <ul class="pledges">
+        <li><span class="when">Within 14 days of every Council meeting</span><p>A written report to USATF members on what was decided and why.</p></li>
+        <li><span class="when">Four times a year</span><p>A call with the leaders of every USATF committee, with notes shared within 14 days.</p></li>
+        <li><span class="when">Every Annual Meeting</span><p>A standing report to delegates, with time for questions.</p></li>
+        <li><span class="when">Within 30 days of the Portland vote</span><p>An open briefing for athletes, coaches and agents on the LA28 qualification system.</p></li>
+      </ul>
+      <p class="fine">Council decisions are collective. She will report what was decided and why, not how individual members voted.</p>
+    </div>
+  </section>
+
+  <section id="priorities" aria-labelledby="h-prio">
+    <div class="wrap stack">
+      <h2 id="h-prio">What she will work on</h2>
+      
+
+      <div class="prio">
+        <h3>For athletes: a fair, clear road to LA28 and beyond</h3>
+        <p>The LA28 qualification system was published on November 10, 2026. About 40 percent of athletes are expected to qualify by entry standard and 60 percent by world ranking. Her focus is to make the rules clear now and fair for every athlete in the next cycle.</p>
+        <div class="three">
+          <div><h4>Qualification</h4><p>Plain-language guidance on how places are earned, and written athlete input before any review of the rules.</p></div>
+          <div><h4>Rankings</h4><p>A request for a published, worldwide review of how national and collegiate championships are rated.</p></div>
+          <div><h4>Formats</h4><p>Athletes asked before a format changes, and the results of every trial published.</p></div>
+        </div>
+        <p class="fine">Source: <a href="https://worldathletics.org/news/press-releases/qualification-system-la28-olympic-games">World Athletics, LA28 qualification system</a>, November 10, 2026.</p>
+      </div>
+
+      <div class="prio">
+        <h3>For officials and volunteers: an open door to international roles</h3>
+        <p>She wants every qualified USATF official and volunteer to know when an international role opens and how to be considered for it.</p>
+        <div class="three">
+          <div><h4>Openings</h4><p>Notice to USATF committees whenever World Athletics or NACAC opens nominations for a commission, working group or officiating panel.</p></div>
+          <div><h4>The path</h4><p>A plain guide to how international technical officials are trained, certified and selected.</p></div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section id="record" aria-labelledby="h-record">
+    <div class="wrap stack">
+      <h2 id="h-record">Her record</h2>
+      <p class="result">The Council reached 13 women and 13 men in 2023, four years ahead of the requirement. She chairs the World Athletics Gender Leadership Taskforce, formed in 2017.</p>
+      <div class="record">
+        <div>
+          <h3>World Athletics and NACAC</h3>
+          <ul>
+            <li>IAAF Council member, elected 2015 and served to 2019</li>
+            <li>Chair, World Athletics Gender Leadership Taskforce</li>
+            <li>NACAC Vice President, appointed 2015</li>
+          </ul>
+        </div>
+        <div>
+          <h3>USA Track &amp; Field</h3>
+          <ul>
+            <li>President, 2008 to 2016</li>
+            <li>Chair of the Board, 2009 to 2015</li>
+            <li>Chair, Women's Track &amp; Field Committee</li>
+            <li>Team leader, team manager and chef de mission for Team USA</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Athlete</h3>
+          <ul>
+            <li>1980 U.S. Olympic Team, 100 meter hurdles</li>
+            <li>Held American and world records</li>
+            <li>Ohio State University</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Executive</h3>
+          <ul>
+            <li>President and CEO, Columbus Urban League</li>
+            <li>President, Columbus Board of Education, five years</li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <section id="answers" aria-labelledby="h-answers">
+    <div class="wrap stack">
+      <h2 id="h-answers">Straight answers</h2>
+      <p>Three questions delegates are asking, answered plainly.</p>
+      
+      <div class="qa">
+        <div>
+          <h3>What happened in 2014, and what has changed?</h3>
+          <p>In 2014 the USATF Board named her as its nominee for the IAAF Council after delegates at the Annual Meeting had voted for another candidate. The Board had the authority to do that under the rules of the time. Many members felt their vote had been set aside, and that reaction was fair.</p>
+          <p>The rule has changed since, and she helped negotiate the change. Today the delegates elect the nominee, and the Board can overturn their choice only by a two-thirds vote for good cause. She is asking for that vote.</p>
+          
+        </div>
+        <div>
+          <h3>What will be different from 2018?</h3>
+          <p>In 2018 the delegates chose another nominee. The lesson was plain: the case has to be made in person, in the rooms where delegates decide. This year she is making it committee by committee, with her commitments in writing and dated so members can check them.</p>
+          <p>The election itself is different too. From 2027 the Council must seat 13 women and 13 men, which is why most of the 13 individual seats will go to women.</p>
+          
+        </div>
+        <div>
+          <h3>Why her?</h3>
+          <p>The arithmetic. With today's Area Presidents, nine or ten of the 13 individual seats will go to women, and USATF sends one nominee.</p>
+          <p>The record. She has won this vote before, with 163 votes in 2015, the most of any candidate for an individual seat. She served on the Council from 2015 to 2019 and chairs the World Athletics Gender Leadership Taskforce today.</p>
+          <p>The commitment. She has put in writing how and when she will report back to members.</p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portland" aria-labelledby="h-portland">
+    <div class="wrap stack">
+      <h2 id="h-portland">Find her in Portland</h2>
+      <p>The USATF Annual Meeting runs December 3 to 6 at the Oregon Convention Center. She wants to hear from you there.</p>
+      <ul class="sched">
+        <li><span class="t">Thursday, December 3<span><br>5:00 to 7:00 p.m.</span></span><span><strong>Opening General Session</strong><br>Oregon Ballroom 201/202</span></li>
+        <li><span class="t">Friday, December 4<span><br>9:00 to 10:00 a.m.</span></span><span><strong>Candidate presentations</strong><br>World Athletics, NACAC and General Competition. Room A104.</span></li>
+        
+      </ul>
+      
+      
+
+      
+    </div>
+  </section>
+
+  
+
+  <section id="sources" aria-labelledby="h-sources">
+    <div class="wrap stack">
+      <h2 id="h-sources">Sources</h2>
+      <ul class="sources">
+        <li><a href="https://worldathletics.org/download/download?filename=f45ccaea-b378-4657-bdd2-6770e3bb2532.pdf&amp;urlslug=x">World Athletics Constitution</a></li>
+        <li><a href="https://worldathletics.org/download/download?filename=4f127f3a-e134-48ed-a876-da12eb4f3568.pdf&amp;urlslug=x">World Athletics Rules of Congress</a></li>
+        <li><a href="https://worldathletics.org/download/download?filename=05dd7bd7-31e1-402b-aaec-4f122af3edfd.pdf&amp;urlSlug=iaaf-council-and-committees-with-votes">IAAF election results</a>, Beijing, August 19, 2015</li>
+        <li><a href="https://worldathletics.org/news/press-releases/sebastian-coe-president-congress-2023-gender-equal-council">World Athletics on the 2023 Council election</a>, August 17, 2023</li>
+        <li><a href="https://worldathletics.org/women-in-athletics/gender-leadership-taskforce">World Athletics Gender Leadership Taskforce</a></li>
+        <li><a href="https://worldathletics.org/organisation/our-organisation/structure/council">World Athletics Council members</a></li>
+        <li><a href="https://www.capitalfm.co.ke/sports/2026/05/17/ak-boss-tuwei-elected-interim-president-of-african-athletics-body/">Capital FM on the African confederation's interim president</a>, May 17, 2026</li>
+        <li><a href="https://usatf.org/news/2018/stephanie-hightower-honored-with-2018-usatf-giegen">USA Track &amp; Field on her 2018 Giegengack Award</a></li>
+        <li><a href="https://www.flipsnack.com/usatf/usa-tf-am-schedule-2026">USATF 2026 Annual Meeting schedule</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>This is a personal campaign page. It is not affiliated with or endorsed by USA Track &amp; Field or World Athletics.</p>
+    <p>Last updated November 19, 2026.</p>
+    
+  </div>
+</footer>
+
+
+
+
+<script>
+/* Seat chart. This is the only script the public site needs. */
+(function () {
+  function $(id) { return document.getElementById(id); }
+  var seat = { p: 'M', a: 0 };
+  function plural(n, one, many) { return n + ' ' + (n === 1 ? one : many); }
+  function group(n, cls, letter) {
+    if (!n) return '';
+    var h = '<span class="grp">';
+    for (var i = 0; i < n; i++) h += '<span class="seat ' + cls + '" aria-hidden="true">' + letter + '</span>';
+    return h + '</span>';
+  }
+  function fill(id, w, m, label) {
+    var el = $(id);
+    el.innerHTML = group(w, 'w', 'W') + group(m, 'm', 'M');
+    el.setAttribute('aria-label', label + ': ' + plural(w, 'woman', 'women') + ', ' + plural(m, 'man', 'men'));
+  }
+  function drawSeats() {
+    var pw = seat.p === 'W' ? 1 : 0;
+    /* Seated before the individual vote: 2 Vice Presidents and 1 athlete of each sex,
+       the President, and the six Area Presidents. */
+    var womenSeated = 2 + 1 + pw + seat.a;
+    var menSeated = 2 + 1 + (1 - pw) + (6 - seat.a);
+    var nw = 13 - womenSeated;
+    var nm = 13 - menSeated;
+    fill('s-pres', pw, 1 - pw, 'President');
+    fill('s-vp', 2, 2, 'Vice Presidents');
+    fill('s-ap', seat.a, 6 - seat.a, 'Area Presidents');
+    fill('s-ath', 1, 1, 'Athlete representatives');
+    fill('s-ind', nw, nm, 'Individual seats');
+    $('n-w').textContent = nw;
+    $('n-m').textContent = nm;
+    $('n-min').textContent = nw;
+    $('area-out').textContent = seat.a + ' of 6';
+    $('pres-m').setAttribute('aria-pressed', String(seat.p === 'M'));
+    $('pres-w').setAttribute('aria-pressed', String(seat.p === 'W'));
+  }
+  if (!$('seat-chart')) return;
+  $('pres-m').addEventListener('click', function () { seat.p = 'M'; drawSeats(); });
+  $('pres-w').addEventListener('click', function () { seat.p = 'W'; drawSeats(); });
+  $('area-w').addEventListener('input', function () {
+    var v = Math.round(Number(this.value));
+    seat.a = isNaN(v) ? 0 : Math.min(6, Math.max(0, v));
+    drawSeats();
+  });
+  drawSeats();
+})();
+</script>
+
+
+
+
+</body></html>
