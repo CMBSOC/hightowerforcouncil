@@ -158,10 +158,6 @@ details{min-width:0;border:1px solid var(--line);border-radius:var(--radius);bac
 summary{padding:1rem 1.1rem;min-height:48px;font-family:var(--font-display);font-weight:700;line-height:1.4;cursor:pointer}
 summary:hover{color:var(--accent)}
 .disclosure-body{padding:0 1.1rem 1.1rem}
-.explainer{background:transparent}
-.explainer > .disclosure-body{padding:0 0 1rem}
-.explainer > .disclosure-body > p,.explainer > .disclosure-body > .stack{padding-left:1.1rem;padding-right:1.1rem}
-.explainer .card{border-left:0;border-right:0;border-radius:0}
 .sources a{overflow-wrap:anywhere}
 
 .sched{list-style:none;margin:0;padding:0;display:grid}
@@ -187,7 +183,7 @@ footer .wrap{display:grid;gap:.5rem}
   .ctl{max-width:100%;width:100%}
   .controls{display:grid;grid-template-columns:minmax(0,1fr)}
   .when{max-width:100%;white-space:normal}
-  .explainer .card{padding:1rem}
+  #seat-chart{padding:1rem}
 
   .row{grid-template-columns:minmax(0,1fr);gap:.25rem}
   .sched li{grid-template-columns:minmax(0,1fr)}
@@ -205,10 +201,10 @@ footer .wrap{display:grid;gap:.5rem}
   <div class="wrap">
     <nav class="nav" aria-label="Sections">
       <ul>
+        <li><a href="#seat-math">Seat math</a></li>
         <li><a href="#commitments">Commitments</a></li>
         <li><a href="#priorities">Priorities</a></li>
         <li><a href="#record">Experience</a></li>
-        <li><a href="#seat-math">The election</a></li>
         <li><a href="#answers">Answers</a></li>
         <li><a href="#portland">Portland</a></li>
       </ul>
@@ -230,8 +226,8 @@ footer .wrap{display:grid;gap:.5rem}
         </div>
         <p class="hero-summary">A former USATF President and IAAF Council member, Stephanie continues to work across international athletics as Chair of the World Athletics Gender Leadership Taskforce.</p>
         <div class="actions">
-          <a class="btn primary" href="#commitments">Read her commitments</a>
-          <a class="btn" href="#portland">Meet her in Portland</a>
+          <a class="btn primary" href="#seat-math">See the seat math</a>
+          <a class="btn" href="#commitments">Read her commitments</a>
         </div>
         <p class="support-line">Support Stephanie for USATF’s nomination.</p>
       </div>
@@ -260,6 +256,65 @@ footer .wrap{display:grid;gap:.5rem}
     </div>
     
   </div>
+
+  <section id="seat-math" aria-labelledby="h-seat">
+    <div class="wrap stack">
+      <h2 id="h-seat">The seat math</h2>
+      <p>USATF chooses its nominee first. The World Athletics Congress then elects the Council. From 2027, the full Council must include 13 women and 13 men.</p>
+      <p>If all six Area Presidents are men, nine or ten of the 13 individual seats will be allocated to women, depending on who is elected President. The Area elections can change that split.</p>
+      <p class="fine">These are available seats, not odds of winning. The number of candidates and support from voting federations will also matter. In 2023, women won 11 of the 13 individual seats.</p>
+
+      <p class="sub">Choose a President and the number of women elected as Area Presidents to see how the individual seats are allocated.</p>
+
+      <div class="card" id="seat-chart">
+        <div class="controls" hidden>
+          <div class="ctl">
+            <span class="ctl-label" id="pres-label">President elected</span>
+            <div class="seg" role="group" aria-labelledby="pres-label">
+              <button type="button" id="pres-m" aria-pressed="true">A man</button>
+              <button type="button" id="pres-w" aria-pressed="false">A woman</button>
+            </div>
+          </div>
+          <div class="ctl">
+            <label class="ctl-label" for="area-w">Women among the six Area Presidents</label>
+            <div class="rng">
+              <input type="range" id="area-w" min="0" max="6" step="1" value="0">
+              <output id="area-out" for="area-w">0 of 6</output>
+            </div>
+          </div>
+        </div>
+
+        <p class="legend"><span class="k"><span class="seat w sm" aria-hidden="true">W</span>Woman</span><span class="k"><span class="seat m sm" aria-hidden="true">M</span>Man</span></p>
+
+        <h3 class="step">Step 1. Settled before the individual vote: 13 seats</h3>
+        <div class="rows">
+          <div class="row"><span class="row-label">President (1)</span><div class="seats" id="s-pres" role="img" aria-label="President: 0 women, 1 man"><span class="grp"><span class="seat m" aria-hidden="true">M</span></span></div></div>
+          <div class="row"><span class="row-label">Vice Presidents (4)</span><div class="seats" id="s-vp" role="img" aria-label="Vice Presidents: 2 women, 2 men"><span class="grp"><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span></span><span class="grp"><span class="seat m" aria-hidden="true">M</span><span class="seat m" aria-hidden="true">M</span></span></div></div>
+          <div class="row"><span class="row-label">Area Presidents (6)</span><div class="seats" id="s-ap" role="img" aria-label="Area Presidents: 0 women, 6 men"><span class="grp"><span class="seat m" aria-hidden="true">M</span><span class="seat m" aria-hidden="true">M</span><span class="seat m" aria-hidden="true">M</span><span class="seat m" aria-hidden="true">M</span><span class="seat m" aria-hidden="true">M</span><span class="seat m" aria-hidden="true">M</span></span></div></div>
+          <div class="row"><span class="row-label">Athletes (2)</span><div class="seats" id="s-ath" role="img" aria-label="Athlete representatives: 1 woman, 1 man"><span class="grp"><span class="seat w" aria-hidden="true">W</span></span><span class="grp"><span class="seat m" aria-hidden="true">M</span></span></div></div>
+        </div>
+
+        <h3 class="step">Step 2. Individual seats, voted last: 13 seats</h3>
+        <div class="seats" id="s-ind" role="img" aria-label="Individual seats: 10 women, 3 men"><span class="grp"><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span></span><span class="grp"><span class="seat m" aria-hidden="true">M</span><span class="seat m" aria-hidden="true">M</span><span class="seat m" aria-hidden="true">M</span></span></div>
+
+        <div class="nums" aria-live="polite">
+          <div class="num"><b id="n-w">10</b><span>individual seats for women</span></div>
+          <div class="num"><b id="n-m">3</b><span>individual seats for men</span></div>
+          <div class="num"><b id="n-min">10</b><span>women every federation's ballot must name, at minimum</span></div>
+        </div>
+        <noscript><p>With a man elected President and six male Area Presidents, 10 individual seats go to women and 3 to men. With a woman elected President, the split is 9 and 4.</p></noscript>
+        <p class="fine">Seats available, not a prediction. As of November 19, 2026, all six Area associations are led by men, one of them on an interim basis. The Area elections in 2027 can change that, and each woman elected moves one seat.</p>
+        
+      </div>
+
+      <div class="stack">
+        <h3>How the count works</h3>
+        <p>The President and Vice Presidents are elected first. The women and men already seated are then counted: the President, the four Vice Presidents, the six Area Presidents and the two athlete members. Each count is subtracted from 13, and the result is announced before the last vote.</p>
+        <p>Every federation votes for exactly 13 names, and a ballot is invalid unless it includes at least the announced number of women and of men. The seats go to the highest vote-getters of each sex.</p>
+        <p class="fine">Sources: <a href="https://worldathletics.org/download/download?filename=f45ccaea-b378-4657-bdd2-6770e3bb2532.pdf&amp;urlslug=x">World Athletics Constitution</a>, Articles 36.6, 41.1 and 86.1, and <a href="https://worldathletics.org/download/download?filename=4f127f3a-e134-48ed-a876-da12eb4f3568.pdf&amp;urlslug=x">Rules of Congress</a>, Rule 8.3.</p>
+      </div>
+    </div>
+  </section>
 
   <section id="commitments" aria-labelledby="h-commit">
     <div class="wrap stack">
@@ -342,70 +397,6 @@ footer .wrap{display:grid;gap:.5rem}
         </div>
       </div>
       <p class="fine">Read more: <a href="https://worldathletics.org/women-in-athletics/gender-leadership-taskforce">World Athletics Gender Leadership Taskforce</a> and <a href="https://www.usatf.org/news/2018/stephanie-hightower-honored-with-2018-usatf-giegen">USATF’s account of her career and service</a>.</p>
-    </div>
-  </section>
-
-  <section id="seat-math" aria-labelledby="h-seat">
-    <div class="wrap stack">
-      <h2 id="h-seat">How the 2027 election works</h2>
-      <p>USATF chooses its nominee first. The World Athletics Congress then elects the Council. From 2027, the full Council must include 13 women and 13 men.</p>
-      <p>If all six Area Presidents are men, nine or ten of the 13 individual seats will be allocated to women, depending on who is elected President. The Area elections can change that split.</p>
-      <p class="fine">These are available seats, not odds of winning. The number of candidates and support from voting federations will also matter. In 2023, women won 11 of the 13 individual seats.</p>
-
-      <details class="explainer">
-        <summary>Explore the seat calculator and voting rules</summary>
-        <div class="disclosure-body stack">
-          <p class="sub">Choose a President and the number of women elected as Area Presidents to see how the individual seats are allocated.</p>
-
-      <div class="card" id="seat-chart">
-        <div class="controls" hidden>
-          <div class="ctl">
-            <span class="ctl-label" id="pres-label">President elected</span>
-            <div class="seg" role="group" aria-labelledby="pres-label">
-              <button type="button" id="pres-m" aria-pressed="true">A man</button>
-              <button type="button" id="pres-w" aria-pressed="false">A woman</button>
-            </div>
-          </div>
-          <div class="ctl">
-            <label class="ctl-label" for="area-w">Women among the six Area Presidents</label>
-            <div class="rng">
-              <input type="range" id="area-w" min="0" max="6" step="1" value="0">
-              <output id="area-out" for="area-w">0 of 6</output>
-            </div>
-          </div>
-        </div>
-
-        <p class="legend"><span class="k"><span class="seat w sm" aria-hidden="true">W</span>Woman</span><span class="k"><span class="seat m sm" aria-hidden="true">M</span>Man</span></p>
-
-        <h3 class="step">Step 1. Settled before the individual vote: 13 seats</h3>
-        <div class="rows">
-          <div class="row"><span class="row-label">President (1)</span><div class="seats" id="s-pres" role="img" aria-label="President: 0 women, 1 man"><span class="grp"><span class="seat m" aria-hidden="true">M</span></span></div></div>
-          <div class="row"><span class="row-label">Vice Presidents (4)</span><div class="seats" id="s-vp" role="img" aria-label="Vice Presidents: 2 women, 2 men"><span class="grp"><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span></span><span class="grp"><span class="seat m" aria-hidden="true">M</span><span class="seat m" aria-hidden="true">M</span></span></div></div>
-          <div class="row"><span class="row-label">Area Presidents (6)</span><div class="seats" id="s-ap" role="img" aria-label="Area Presidents: 0 women, 6 men"><span class="grp"><span class="seat m" aria-hidden="true">M</span><span class="seat m" aria-hidden="true">M</span><span class="seat m" aria-hidden="true">M</span><span class="seat m" aria-hidden="true">M</span><span class="seat m" aria-hidden="true">M</span><span class="seat m" aria-hidden="true">M</span></span></div></div>
-          <div class="row"><span class="row-label">Athletes (2)</span><div class="seats" id="s-ath" role="img" aria-label="Athlete representatives: 1 woman, 1 man"><span class="grp"><span class="seat w" aria-hidden="true">W</span></span><span class="grp"><span class="seat m" aria-hidden="true">M</span></span></div></div>
-        </div>
-
-        <h3 class="step">Step 2. Individual seats, voted last: 13 seats</h3>
-        <div class="seats" id="s-ind" role="img" aria-label="Individual seats: 10 women, 3 men"><span class="grp"><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span><span class="seat w" aria-hidden="true">W</span></span><span class="grp"><span class="seat m" aria-hidden="true">M</span><span class="seat m" aria-hidden="true">M</span><span class="seat m" aria-hidden="true">M</span></span></div>
-
-        <div class="nums" aria-live="polite">
-          <div class="num"><b id="n-w">10</b><span>individual seats for women</span></div>
-          <div class="num"><b id="n-m">3</b><span>individual seats for men</span></div>
-          <div class="num"><b id="n-min">10</b><span>women every federation's ballot must name, at minimum</span></div>
-        </div>
-        <noscript><p>With a man elected President and six male Area Presidents, 10 individual seats go to women and 3 to men. With a woman elected President, the split is 9 and 4.</p></noscript>
-        <p class="fine">Seats available, not a prediction. As of November 19, 2026, all six Area associations are led by men, one of them on an interim basis. The Area elections in 2027 can change that, and each woman elected moves one seat.</p>
-        
-      </div>
-
-      <div class="stack">
-        <h3>How the count works</h3>
-        <p>The President and Vice Presidents are elected first. The women and men already seated are then counted: the President, the four Vice Presidents, the six Area Presidents and the two athlete members. Each count is subtracted from 13, and the result is announced before the last vote.</p>
-        <p>Every federation votes for exactly 13 names, and a ballot is invalid unless it includes at least the announced number of women and of men. The seats go to the highest vote-getters of each sex.</p>
-        <p class="fine">Sources: <a href="https://worldathletics.org/download/download?filename=f45ccaea-b378-4657-bdd2-6770e3bb2532.pdf&amp;urlslug=x">World Athletics Constitution</a>, Articles 36.6, 41.1 and 86.1, and <a href="https://worldathletics.org/download/download?filename=4f127f3a-e134-48ed-a876-da12eb4f3568.pdf&amp;urlslug=x">Rules of Congress</a>, Rule 8.3.</p>
-      </div>
-        </div>
-      </details>
     </div>
   </section>
 
