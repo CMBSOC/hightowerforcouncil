@@ -94,12 +94,14 @@ section{scroll-margin-top:1rem}
 .actions{display:flex;flex-wrap:wrap;gap:.75rem}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;max-width:100%;padding:.65rem 1.2rem;border-radius:var(--radius);font:600 1rem var(--font-body);text-align:center;text-decoration:none;cursor:pointer;border:1px solid var(--ink);background:transparent;color:var(--ink)}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
-.portrait{flex:0 1 14rem;display:grid;gap:.5rem;align-content:end}
+.portrait{flex:0 1 16rem;display:grid;gap:.5rem;align-content:end}
 .portrait img,.mono{display:block;width:100%;height:auto;border-radius:calc(var(--radius) + 4px)}
-.mono-bg{fill:var(--accent)}
-.mono-lanes circle{stroke:var(--on-accent);stroke-opacity:.22;stroke-width:1.5}
-.mono-text{fill:var(--on-accent);font-family:var(--font-display);font-weight:800;font-size:132px;letter-spacing:-4px}
-@media (max-width:700px){.portrait.standin{display:none}}
+.portrait .frame{position:relative}
+.portrait .frame .mono{border-radius:0;-webkit-mask-image:radial-gradient(closest-side,#000 45%,transparent 100%);mask-image:radial-gradient(closest-side,#000 45%,transparent 100%)}
+.portrait .frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:0;-webkit-mask-image:linear-gradient(#000 84%,transparent 100%);mask-image:linear-gradient(#000 84%,transparent 100%)}
+.mono-bg{fill:none}
+.mono-lanes circle{stroke:var(--accent);stroke-opacity:.34;stroke-width:1.5}
+@media (max-width:700px){.portrait{flex:0 1 12rem;order:-1}}
 
 .stats{display:grid;grid-template-columns:minmax(0,1fr);gap:1rem;padding-bottom:2.5rem}
 @media (min-width:52rem){.stats{grid-template-columns:repeat(3,minmax(0,1fr))}}
@@ -232,8 +234,9 @@ footer .wrap{display:grid;gap:.5rem}
         <p class="support-line">Support Stephanie for USATF’s nomination.</p>
       </div>
       
-      <div class="portrait standin">
-        <svg class="mono" viewBox="0 0 280 350" role="img" aria-label="Initials S H">
+      <div class="portrait">
+        <div class="frame">
+        <svg class="mono" viewBox="0 0 280 350" aria-hidden="true">
           <rect class="mono-bg" width="280" height="350"></rect>
           <g class="mono-lanes" fill="none">
             <circle cx="300" cy="-20" r="100"></circle>
@@ -243,9 +246,9 @@ footer .wrap{display:grid;gap:.5rem}
             <circle cx="300" cy="-20" r="260"></circle>
             <circle cx="300" cy="-20" r="300"></circle>
           </g>
-          <text class="mono-text" x="22" y="322">SH</text>
         </svg>
-        
+        <img src="stephanie-hightower.webp" alt="Stephanie Hightower" width="800" height="1000">
+        </div>
       </div>
     </div>
 
