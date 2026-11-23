@@ -297,6 +297,82 @@ details.more-detail > .stack{padding-top:.4rem}
 footer{background:var(--navy);border-top:3px solid var(--gold);color:#C9CEDD}
 footer a{color:var(--gold);display:inline-flex;align-items:center;min-height:44px}
 /* ================= END TRIFOLD LOOK ================= */
+
+/* ================= DESKTOP =================
+   Wider page, a bigger cover, section titles in a left rail. Every rule here needs a window wider than 820px,
+   so phones and small tablets are untouched. */
+.nav .brand{display:none}
+@media (min-width:821px){
+  .wrap{max-width:68rem;padding:0 40px}
+  .hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:". photo" "who photo" "msg photo" "intro photo" ". photo";grid-template-rows:minmax(0,.7fr) auto auto auto minmax(0,1.3fr);column-gap:2.2rem;row-gap:0;padding:0}
+  .who{padding-top:1.7rem}
+  .msg{padding-top:1.35rem}
+  .intro{padding-top:1.25rem;padding-bottom:2.3rem}
+  h1{font-size:clamp(5rem,min(8.8vw,16.5vh),7.4rem)}
+  .lead{font-size:1.2rem;text-wrap:balance}
+  .tagline{font-size:clamp(2.35rem,min(4.3vw,7.6vh),3rem)}
+  .threewords{font-size:1.2rem}
+  .portrait{width:min(100%,max(calc((100vh - 96px) * .8),21rem));justify-self:end;margin-top:1.4rem}
+}
+@media (min-width:821px) and (max-height:740px){
+  .intro .hero-summary{order:0}
+}
+@media (min-width:1000px) and (max-width:1099px){
+  .intro .hero-summary{order:0}
+}
+/* Small laptop windows and large tablets: photo beside the name and headline, buttons on a cream band below. */
+@media (min-width:821px) and (max-width:999px){
+  .hero{grid-template-areas:"who photo" "msg photo" "intro intro";grid-template-rows:auto 1fr auto}
+  .msg{padding-bottom:1.8rem}
+  .intro{background:var(--paper);margin:0 -40px;padding:1.5rem 40px .4rem;position:relative;z-index:3}
+  .intro .hero-summary{order:0;color:var(--ink);max-width:none}
+  .intro .support-line{color:var(--ink)}
+  .cover .intro .btn{border-color:var(--ink);color:var(--ink)}
+  .cover .intro .btn.primary{background:var(--navy);border-color:var(--navy);color:#fff}
+  .stats{padding-top:1.25rem}
+}
+@media (min-width:1000px){
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+  .nav::after{display:none}
+  .nav ul{padding:.1rem 0;overflow:visible}
+  .nav .brand{display:inline-flex;align-items:center;min-height:44px;font-family:var(--font-display);font-weight:500;font-size:1.2rem;letter-spacing:.07em;text-transform:uppercase;color:var(--cream);text-decoration:none;white-space:nowrap}
+  .nav .brand b{font-weight:800;color:#fff;margin-left:.35em}
+  .stats{padding-top:2.4rem;padding-bottom:3rem;gap:1.25rem}
+  .stat{padding:1.3rem 1.4rem}
+  .stat b{font-size:2.9rem}
+  .stat span{font-size:1rem}
+  section{padding:4rem 0}
+  section > .stack{grid-template-columns:clamp(13rem,23vw,16rem) minmax(0,1fr);column-gap:3.2rem}
+  section > .stack > *{grid-column:2}
+  section > .stack > h2{grid-column:1;grid-row:1 / span 2;align-self:start}
+  #sources > .stack > h2{grid-row:1}
+  #five > .stack{grid-template-columns:minmax(0,1fr);row-gap:2rem}
+  #five > .stack > *{grid-column:1}
+  .pull{font-size:1.7rem;line-height:1.35;text-align:center;max-width:44rem;margin:0 auto;text-wrap:balance}
+  .five-head{padding:1.5rem 1.8rem 1.3rem;display:flex;align-items:baseline;justify-content:space-between;gap:1.5rem}
+  .five-head h2 span{display:inline}
+  .five-head p{margin-top:0;white-space:nowrap}
+  .five{padding:.4rem 1.8rem}
+  .five li{grid-template-columns:3.2rem minmax(0,1fr);column-gap:1.3rem;padding:1.3rem 0}
+  .five li > div{display:grid;grid-template-columns:minmax(0,19rem) minmax(0,1fr);grid-template-rows:auto 1fr auto;column-gap:2.4rem;align-items:start}
+  .five .line{text-wrap:balance}
+  .five li h3,.five li .line{grid-column:1}
+  .five li .proof{grid-column:2;grid-row:1 / span 2;margin-top:0}
+  .five li .more{grid-column:2}
+  .five .n{font-size:3.4rem}
+  .five-foot{font-size:1.25rem;padding:1.05rem 1.8rem}
+  .pledges{grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+  .pledges li{align-content:start}
+  footer{padding:2.4rem 0 3rem}
+}
+@media (min-width:1100px){
+  .hero{grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);column-gap:3rem}
+  .tagline{font-size:clamp(2.2rem,min(3.75vw,7.4vh),2.6rem);line-height:1.04}
+  .tagline span{display:inline}
+  .tagline span:nth-child(3)::before{content:"\A";white-space:pre}
+  .lead{font-size:1.28rem}
+}
+/* ================= END DESKTOP ================= */
 </style>
 
 <link rel="canonical" href="https://hightowerforcouncil.com/"><meta property="og:url" content="https://hightowerforcouncil.com/"><meta property="og:type" content="website"></head>
@@ -306,6 +382,7 @@ footer a{color:var(--gold);display:inline-flex;align-items:center;min-height:44p
 <header class="top">
   <div class="wrap">
     <nav class="nav" aria-label="Sections">
+      <a class="brand" href="#main" aria-label="Stephanie Hightower, back to top">Stephanie <b>Hightower</b></a>
       <ul>
         <li><a href="#five">Commitments</a></li>
         <li><a href="#seat-math">Seat math</a></li>
@@ -601,7 +678,7 @@ footer a{color:var(--gold);display:inline-flex;align-items:center;min-height:44p
   <div class="wrap">
     <p>Contact Stephanie: <a href="mailto:stephanie@hightowerforcouncil.com">stephanie@hightowerforcouncil.com</a></p>
     <p>This is a personal campaign page. It is not affiliated with or endorsed by USA Track &amp; Field or World Athletics.</p>
-    <p>Last updated November 22, 2026.</p>
+    <p>Last updated November 23, 2026.</p>
     
   </div>
 </footer>
