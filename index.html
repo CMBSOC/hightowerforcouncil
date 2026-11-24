@@ -300,7 +300,12 @@ footer a{color:var(--gold);display:inline-flex;align-items:center;min-height:44p
 
 /* Pitch video, right under the cover */
 #video{border-top:0;padding:2.2rem 0 .6rem}
-.video-frame{background:var(--navy);border-radius:10px;overflow:hidden;line-height:0;box-shadow:0 1px 0 var(--line)}
+.video-frame{background:var(--navy);border-radius:10px;overflow:hidden;line-height:0;border-bottom:4px solid var(--gold);box-shadow:0 14px 34px rgba(15,30,71,.2)}
+.video-note{font-size:1rem;color:var(--ink);font-weight:600;max-width:40rem}
+.video-note span{display:block;font-weight:400;font-size:.88rem;color:var(--muted);margin-top:.15rem}
+.btn.watch svg{margin-right:.4rem;flex:none}
+@media (max-width:480px){.btn.watch .w-long{display:none}}
+@media (min-width:821px){.intro .actions .btn{padding:.65rem 1rem}}
 .video-frame video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:var(--navy)}
 .video-frame{position:relative}
 .video-play{position:absolute;left:.9rem;bottom:.9rem;width:3.7rem;height:3.7rem;border-radius:50%;border:3px solid #fff;background:var(--gold);color:var(--navy);display:grid;place-items:center;cursor:pointer;box-shadow:0 6px 22px rgba(15,30,71,.45);padding:0 0 0 .25rem}
@@ -424,8 +429,8 @@ footer a{color:var(--gold);display:inline-flex;align-items:center;min-height:44p
       </div>
       <div class="intro">
         <div class="actions">
-          <a class="btn primary" href="#five">Her five commitments</a>
-          <a class="btn" href="#seat-math">The seat math</a>
+          <a class="btn primary watch" href="#video" data-play-video aria-label="Watch her message"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>Watch<span class="w-long">&nbsp;her message</span></a>
+          <a class="btn" href="#five">Her five commitments</a>
         </div>
         <p class="hero-summary">A former USATF President and IAAF Council member, Stephanie continues to work across international athletics as Chair of the World Athletics Gender Leadership Taskforce.</p>
         <p class="support-line">Support Stephanie for USATF’s nomination.</p>
@@ -438,13 +443,13 @@ footer a{color:var(--gold);display:inline-flex;align-items:center;min-height:44p
     <div class="wrap stack">
       <h2 id="h-video">Her message to USATF members</h2>
       <div class="video-frame">
-        <video controls playsinline preload="none" poster="pitch-poster.jpg" width="1280" height="720" aria-label="Stephanie Hightower asks USATF members for their vote. 2 minutes 19 seconds.">
-          <source src="stephanie-hightower-pitch.mp4" type="video/mp4">
-          <a href="stephanie-hightower-pitch.mp4">Watch Stephanie's message (video, 2 minutes 19 seconds)</a>
+        <video controls playsinline preload="none" poster="pitch-poster.jpg" width="1280" height="720" aria-label="Stephanie Hightower asks USATF members for their vote. 2 minutes 15 seconds, with captions.">
+          <source src="stephanie-hightower-pitch-v3.mp4" type="video/mp4">
+          <a href="stephanie-hightower-pitch-v3.mp4">Watch Stephanie's message (video, 2 minutes 15 seconds)</a>
         </video>
         <button class="video-play" type="button" aria-label="Play Stephanie's message" hidden><svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></button>
       </div>
-      <p class="fine">2 minutes 19 seconds, with sound.</p>
+      <p class="video-note">Stephanie asks for your vote, in her own words. <span>2 minutes 15 seconds, with captions.</span></p>
     </div>
   </section>
 
@@ -784,7 +789,10 @@ footer a{color:var(--gold);display:inline-flex;align-items:center;min-height:44p
   var v=document.querySelector('#video video'),b=document.querySelector('.video-play');
   if(!v||!b)return;
   b.hidden=false;
-  b.addEventListener('click',function(){b.hidden=true;var p=v.play();if(p&&p.catch)p.catch(function(){b.hidden=false;});});
+  function start(){b.hidden=true;var p=v.play();if(p&&p.catch)p.catch(function(){b.hidden=false;});}
+  b.addEventListener('click',start);
+  var w=document.querySelectorAll('[data-play-video]');
+  for(var i=0;i<w.length;i++)w[i].addEventListener('click',start);
   v.addEventListener('play',function(){b.hidden=true;});
   v.addEventListener('ended',function(){b.hidden=false;});
 })();
