@@ -298,6 +298,15 @@ footer{background:var(--navy);border-top:3px solid var(--gold);color:#C9CEDD}
 footer a{color:var(--gold);display:inline-flex;align-items:center;min-height:44px}
 /* ================= END TRIFOLD LOOK ================= */
 
+/* Pitch video, right under the cover */
+#video{border-top:0;padding:2.2rem 0 .6rem}
+.video-frame{background:var(--navy);border-radius:10px;overflow:hidden;line-height:0;box-shadow:0 1px 0 var(--line)}
+.video-frame video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:var(--navy)}
+.video-frame{position:relative}
+.video-play{position:absolute;left:.9rem;bottom:.9rem;width:3.7rem;height:3.7rem;border-radius:50%;border:3px solid #fff;background:var(--gold);color:var(--navy);display:grid;place-items:center;cursor:pointer;box-shadow:0 6px 22px rgba(15,30,71,.45);padding:0 0 0 .25rem}
+.video-play[hidden]{display:none}
+.video-play:hover{background:#E8C873}
+.video-play:focus-visible{outline:3px solid #fff;outline-offset:3px}
 /* ================= DESKTOP =================
    Wider page, a bigger cover, section titles in a left rail. Every rule here needs a window wider than 820px,
    so phones and small tablets are untouched. */
@@ -424,6 +433,20 @@ footer a{color:var(--gold);display:inline-flex;align-items:center;min-height:44p
     </div>
   </div>
   </div>
+
+  <section id="video" aria-labelledby="h-video">
+    <div class="wrap stack">
+      <h2 id="h-video">Her message to USATF members</h2>
+      <div class="video-frame">
+        <video controls playsinline preload="none" poster="pitch-poster.jpg" width="1280" height="720" aria-label="Stephanie Hightower asks USATF members for their vote. 2 minutes 19 seconds.">
+          <source src="stephanie-hightower-pitch.mp4" type="video/mp4">
+          <a href="stephanie-hightower-pitch.mp4">Watch Stephanie's message (video, 2 minutes 19 seconds)</a>
+        </video>
+        <button class="video-play" type="button" aria-label="Play Stephanie's message" hidden><svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></button>
+      </div>
+      <p class="fine">2 minutes 19 seconds, with sound.</p>
+    </div>
+  </section>
 
   <div class="wrap">
     <div class="stats">
@@ -678,7 +701,7 @@ footer a{color:var(--gold);display:inline-flex;align-items:center;min-height:44p
   <div class="wrap">
     <p>Contact Stephanie: <a href="mailto:stephanie@hightowerforcouncil.com">stephanie@hightowerforcouncil.com</a></p>
     <p>This is a personal campaign page. It is not affiliated with or endorsed by USA Track &amp; Field or World Athletics.</p>
-    <p>Last updated November 23, 2026.</p>
+    <p>Last updated November 24, 2026.</p>
     
   </div>
 </footer>
@@ -754,6 +777,16 @@ footer a{color:var(--gold);display:inline-flex;align-items:center;min-height:44p
       status.textContent = 'Copy this address: ' + url;
     }
   });
+})();
+
+/* Pitch video: a large play button over the cover frame. The player's own controls still work without it. */
+(function(){
+  var v=document.querySelector('#video video'),b=document.querySelector('.video-play');
+  if(!v||!b)return;
+  b.hidden=false;
+  b.addEventListener('click',function(){b.hidden=true;var p=v.play();if(p&&p.catch)p.catch(function(){b.hidden=false;});});
+  v.addEventListener('play',function(){b.hidden=true;});
+  v.addEventListener('ended',function(){b.hidden=false;});
 })();
 </script>
 
